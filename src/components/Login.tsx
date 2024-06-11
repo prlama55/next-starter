@@ -6,4 +6,4 @@ const Login = () => {
   return <>Login component</>;
 };
 
-export default Login
+export default Login;
