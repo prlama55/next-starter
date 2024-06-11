@@ -2,6 +2,7 @@ import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import AuthProvider from './context/AuthProvider';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -24,11 +25,13 @@ export default function RootLayout({ children }: Readonly<LayoutProps>): JSX.Ele
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <Navbar />
-        <main className='flex grainy-light flex-col min-h-[calc(100vh-10rem-1px)]'>
-          <div className='flex-1 flex flex-col h-full'>{children}</div>
-        </main>
-        <Footer />
+        <AuthProvider>
+          <Navbar />
+          <main className='flex grainy-light flex-col min-h-[calc(100vh-10rem-1px)]'>
+            <div className='flex-1 flex flex-col h-full'>{children}</div>
+          </main>
+          <Footer />
+        </AuthProvider>
       </body>
     </html>
   );

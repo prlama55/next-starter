@@ -1,6 +1,10 @@
 import Link from 'next/link';
 import Container from './Container';
 
+/**
+ * Application footer component
+ * @return {JSX.Element} The rendered component
+ */
 const Footer = () => {
   return (
     <footer className='bg-white h-20 relative'>

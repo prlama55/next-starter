@@ -2,7 +2,7 @@ import { cn } from '@/lib/utils';
 import type { ReactNode } from 'react';
 
 /**
- * Props type for wrapper
+ * Props type for wrapper component
  */
 type WrapperProps = {
   // class names

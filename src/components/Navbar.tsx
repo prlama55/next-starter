@@ -3,7 +3,7 @@ import Container from './Container';
 import { buttonVariants } from './ui/button';
 
 /**
- * Application navbar
+ * Application navbar component
  * @return {JSX.Element} The rendered component
  */
 const Navbar = (): JSX.Element => {
